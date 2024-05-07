@@ -1,0 +1,21 @@
+﻿<Window x:Class="SimpleNoteApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SimpleNoteApp"
+        mc:Ignorable="d"
+        Title="Notizenverwaltung der Firma DataManage Solutions GmbH" Height="314" Width="809">
+    <Grid Background="#FFD5CDCD" Margin="0,0,0,-6">
+        <TextBox x:Name="txt_notiz_titel" HorizontalAlignment="Left" Height="26" Margin="43,52,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="264" BorderBrush="Black" Background="#FFD1F4B4" VerticalContentAlignment="Center"/>
+        <Label x:Name="lbl_notiz_titel" Content="Titel:" HorizontalAlignment="Left" Height="25" Margin="43,29,0,0" VerticalAlignment="Top" Width="187"/>
+        <Label x:Name="lbl_notiz_inhalt" Content="Inhalt:" HorizontalAlignment="Left" Height="25" Margin="43,86,0,0" VerticalAlignment="Top" Width="187"/>
+        <TextBox x:Name="txt_notiz_inhalt" HorizontalAlignment="Left" Height="115" Margin="43,111,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="264" BorderBrush="Black" Background="White"/>
+        <Label x:Name="lbl_vorhandene_notizen" Content="Liste der vorhandenen Notizen:" HorizontalAlignment="Left" Height="25" Margin="379,29,0,0" VerticalAlignment="Top" Width="217"/>
+        <ListBox x:Name="lstbx_vorhandene_notizen" HorizontalAlignment="Left" Height="204" Margin="379,53,0,0" VerticalAlignment="Top" Width="217" d:ItemsSource="{d:SampleData ItemCount=5}" SelectionChanged="lstbx_vorhandene_notizen_SelectionChanged"/>
+        <Button x:Name="btn_notiz_loeschen" Content="Notiz löschen" HorizontalAlignment="Left" Height="45" Margin="655,83,0,0" VerticalAlignment="Top" Width="111" FontSize="14" FontWeight="Bold" Background="#FFF45656" Click="btn_notiz_loeschen_Click"/>
+        <Button x:Name="btn_notiz_erstellen" Content="Notiz erstellen" HorizontalAlignment="Left" Height="45" Margin="655,140,0,0" VerticalAlignment="Top" Width="111" FontSize="14" FontWeight="Bold" Background="#FF91F456" Click="btn_notiz_erstellen_Click"/>
+        <TextBlock x:Name="txtblk_meldungen" HorizontalAlignment="Left" Height="21" Margin="43,236,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="264"/>
+
+    </Grid>
+</Window>
